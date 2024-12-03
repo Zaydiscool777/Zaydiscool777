@@ -35,4 +35,5 @@ weht do yeh tink [tis fer](https://github.com/stars/Zaydiscool777/lists/todo)
 
 - Godot
 - Blender
+- Git tool in command-line to visualize trees and semi-visual actions
 - I forgor 💀
