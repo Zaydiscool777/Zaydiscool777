@@ -1,24 +1,28 @@
 Polish notation
 A sym(bol) is one of:
-- A normal char(acter), e.g. “a”, called a lit(eral)
-- A symbol that doesn’t take input
-- A symbol and it’s following inputs
-# matches unicode lit from first 4 lit inputs that match “[0F”
-(i.e. <- “|||01|23|45|67|89|ab|cd|ef|||01|23|45|67|89|ab|cd|ef|||01|23|45|67|89|ab|cd|ef|||01|23|45|67|89|ab|cd|ef”)
+- A normal char(acter), e.g. "a", called a lit(eral)
+- A symbol that doesn't take input
+- A symbol and it's following inputs
+# matches unicode lit from first 4 lit inputs that match "[0F"
+(i.e. <- "|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF")
 and is considered a lit.
 
 Primitive nonliteral characters are:
 . -> matches any lit
-* -> matches next sym any amount of times
-*. is special: it makes the searcher search for the expression after it.
-~ -> matches anything but next sym input
+* -> matches next sym input any amount of times
+*. is special: it makes the searcher search for the rest of the expression after it.
+~ -> matches anything in . but next sym input
 & -> matches intersection of the next two sym inputs
-] -> matches nothing (so “|]ab can match ‘ab’ or ‘b’)
+] -> matches nothing (so "|]ab can match 'ab' or 'b')
 # already explained
+> - matches next sym input on next character after that one that is being tested
 
 Semi-primitive nonliteral characters are:
-| -> matches intersection of the next two sym inputs (“|ab” == “~&~a~b”)
-[ -> matches any lit from unicode first lit input to second lit input, e.g. “[Az”
-(while tedious, it can be done w/ |, which can be w/ ~ and &. See # for “[0F”)
-( -> matches start (add “~[#0000#FFFF” to start)
-) -> matches end (like “(“ but add at end)
+| -> matches intersection of the next two sym inputs ("|ab" == "~&~a~b")
+[ -> matches any lit from unicode first lit input to second lit input, e.g. "[Az"
+(while tedious, it can be done w/ |, which can be w/ ~ and &.
+e.g. "[0F" becomes "|||01|23|45|67|89|AB|CD|EF", which becomes, uh...)
+( -> matches start (add "~[#0000#FFFF" to start)
+) -> matches end (like "(" but add at end)
+{} is special: it takes in a hex number BETWEEN { and } and repeats the next sym that many times
+(i.e. <- "*|||01|23|45|67|89|AB|CD|EF")
