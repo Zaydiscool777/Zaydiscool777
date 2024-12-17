@@ -4,7 +4,6 @@ A sym(bol) is one of:
 - A symbol that doesn't take input
 - A symbol and it's following inputs
 # matches unicode lit from first 4 lit inputs that match "[0F"
-(i.e. <- "|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF|||01|23|45|67|89|AB|CD|EF")
 and is considered a lit.
 
 Primitive nonliteral characters are:
@@ -17,14 +16,16 @@ Primitive nonliteral characters are:
 # already explained
 > -> matches next sym input on next character after that one that is being tested
 < -> matches next sym input on previous character after that one that is being tested
+( -> matches start
+) -> matches end
 
 Semi-primitive nonliteral characters are:
 | -> matches intersection of the next two sym inputs ("|ab" == "~&~a~b")
 [ -> matches any lit from unicode first lit input to second lit input, e.g. "[Az"
 (while tedious, it can be done w/ |, which can be w/ ~ and &.
 e.g. "[0F" becomes "|||01|23|45|67|89|AB|CD|EF", which becomes, uh...)
-( -> matches start (add "~[#0000#FFFF" to start)
-) -> matches end (like "(" but add at end)
-{} is special: it takes in a hex number BETWEEN { and } and repeats the next sym that many times
-(i.e. <- "*|||01|23|45|67|89|AB|CD|EF")
-\ -> escapes one of .*~&[]()<>{}|\
+{} is special: it takes in a hex number BETWEEN { and } and repeats the next sym that many times,
+as if it was replaced inside of the expression.
+e.g. {A}
+\ -> escapes the characters ".*~&[]()<>{}|\" ("\\" == "#005C")
+\t, \n, \v and \r also work, but can also be interpreted literally in polex.
