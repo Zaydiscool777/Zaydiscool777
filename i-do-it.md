@@ -4,3 +4,4 @@ How I do it! (a list of things i use)
 ![Static Badge](https://img.shields.io/badge/a-1-f33)-->
 
 [![Static Badge](https://img.shields.io/badge/flash-wickeditor-0d7)](https://wickeditor.com)
+[![Static Badge](https://img.shields.io/badge/paint-kleki-37d)](https://wickeditor.com)
