@@ -2,7 +2,10 @@
 
 ### [ln > bio](https://beacons.ai/zaydiscool777)
 
-![GitHub User's stars](https://img.shields.io/github/stars/zaydiscool777?style=flat)
+![GitHub User's stars](https://img.shields.io/github/stars/zaydiscool777?style=flat&color=yellow)
+![Github User's forks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github-star-counter.workers.dev%2Fuser%2FZaydiscool777&query=%24.forks&label=forks&color=blue)
+
+
 
 ## RIGHT NOW!
 
