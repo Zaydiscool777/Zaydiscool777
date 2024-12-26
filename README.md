@@ -16,8 +16,9 @@ no
 weht do yeh tink [tis fer](https://github.com/stars/Zaydiscool777/lists/todo)
 
 ### OTHER TODOS
+<details>
 
-- Godot
+- Godot  
 - Blender
 - Git tool in command-line to visualize trees and semi-visual actions
 - 0ne lang?
@@ -31,6 +32,8 @@ weht do yeh tink [tis fer](https://github.com/stars/Zaydiscool777/lists/todo)
 <img src=https://u.cubeupload.com/Zaydiscool777/r9QhY6.png alt="klek." height=100 width=1000 >
 
 [![i'm only human after all](https://markdown-videos-api.jorgenkh.no/youtube/dV006QjxaDY)](https://youtube.com/embed/dV006QjxaDY)
+
+</details>
 
 <!--
 **Zaydiscool777/Zaydiscool777** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
