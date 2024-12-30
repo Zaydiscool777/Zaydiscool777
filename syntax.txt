@@ -1,0 +1,68 @@
+syntax notes::
+	interpreted from left-to-right
+	\ before char iff char is of {\,‘,\n}
+	\ and ‘ lit, newline “commented out”
+	one, mul, and rts are unary
+	all other syms stretch as far to both sides
+	although they stretch more to right b/c this
+
+self-definition::
+MAIN: def *def
+def: (term|comm|term comm) ‘
+’
+term: var ‘: ’ sym
+comm: ‘// ’ *WILD // comment
+var: *|’abcdefghijklmnopqrstuvwxyz-’
+sym: ?‘ ’ \
+(after|var|union|rts|lit|group|one|mul|func)\
+ ?‘ ’
+after: sym ‘ ’ sym
+union: sym ‘|’ sym
+rts: ‘|’ lit
+lit: ‘\’’ *WILD ‘\’’ // WILD means any char mapped to this
+group: ‘(’ sym ‘)’
+one: ‘?’ sym // zero or one
+mul: ‘*’ sym // zero or more
+
+meanings::
+`MAIN` is the syntax of the entire input
+`term` makes $1 as a term equal to $2
+`comm` is a comment, and is not interpreted
+`var`’s definition can be changed, is the name of a term
+best not to include numbers
+`sym` is a symbol that is interpreted
+`after`: ‘a’ ‘b’ means ab
+`union`: ‘a’|’b’ means a or b
+`rts`: any char in the lit, so |‘ab’ means ‘a’|‘b’
+`lit` is literal, therefore newlines
+`group`:
+	( and ) are “commented out”
+	anything applied to ( is instead applied to in ( & )
+`one` is similar to CONT | a CONT where a is input
+`mult` is similar to CONT | a *a CONT where a is input
+`WILD` means any character, after interpretation (\\,\`,\
+)
+
+implementation?::
+*WILD is different from WILD and *, because it’s hard to interpret literally.
+MAIN, WILD, and *WILD are special variables
+returns MAIN as json: `term` is, for example:
+{ var: “abc”, has: {type: …} }
+`comm` is not in json
+`var` is a string
+`sym` is, for example:
+{type: “after”, has: …}
+`after` is a list of size 2: [{type: …}, {type: …}]
+`union` is a list of size 2:
+	first item is bool for if it matches left of |
+	second item is that symbol
+e.g.: { type: “union”, has: [true, {type: …}] }
+`rts` is a character: {type: “rts”, has: ‘a’}
+`lit` is like `rts`, but not just a character
+`group` is, for example:
+{ type: “group”, has: {type: …} }
+`one` is like union, but bool means if it’s inside
+`mul` is like one, but instead of bool it’s int
+`WILD` doesn’t have a has key
+`*WILD` is like mul, but the has key is just the int
+
