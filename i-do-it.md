@@ -19,5 +19,5 @@ How I do it! (a list of things i use)
   - (as opposed to C++ (`std::cout << "???" << std::endl;`) and C# (just java, which is bad))
   - ![Raylib](https://img.shields.io/badge/game%20library-raylib-000)
 - [![Lua](https://img.shields.io/badge/lua-000)](https://lua.org)
-<!--javascript crystal ruby elm smalltalk löve-->
+<!--javascript crystal ruby elm smalltalk löve https://lovr.org/-->
 <!--lmms.io bfxr.net-->
