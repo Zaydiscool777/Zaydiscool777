@@ -9,7 +9,7 @@
 
 ## RIGHT NOW!
 
-no
+i am learning flutter sdk
 
 ### FUTURE REPOS
 
