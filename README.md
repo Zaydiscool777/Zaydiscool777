@@ -7,25 +7,34 @@
 
 
 
-## RIGHT NOW!
+## TO-DO LIST
 
-i am learning flutter sdk
-
-### FUTURE REPOS
-
-weht do yeh tink [tis fer](https://github.com/stars/Zaydiscool777/lists/todo)
+to-do list: (* = main, none = side)
+-* learn flutter
+- finish 99.lisp
+- work on z-ed
+-* create masjidhamza.com api (for myself)
+- learn c++
+- remember python exists
+	- make lambdaplop
+- finish tutorials for godot
+- learn lua
+	- https://rubenwardy.com/minetest_modding_book/en/index.html
+- learn->implement forth (https://ratfactor.com/forth/implementing)
+- do some more stuff with the lisp1 and lisp1.5 ref manuals (use eval.lisp)
+- learn ruby, elixir, crystal, scala, pascal, lean4, smalltalk, elm, phix, seed7, (tiny)apl, wren, oz, tcl
+	- https://github.com/ilmanzo/crystal-koans
+	- https://github.com/elixirkoans/elixir-koans
+	- https://github.com/sl4m/gnu_smalltalk_koans (i might use squeak though)
+	- lean4 exercises: what is the name of this book? & to mock a mockingbird
+- backup stuff sooner or later
+	- like wsl stuff
 
 ### OTHER TODOS
 <details>
 
 - Godot  
 - Blender
-- Git tool in command-line to visualize trees and semi-visual actions
-- 0ne lang?
-- <blockquote class="reddit-embed-bq" style="height:316px" data-embed-height="316"><a href="https://www.reddit.com/r/replit/comments/1f2xv9p/guide_how_to_export_your_data_and_leave_replit/">[Guide] How to export your data and leave Replit behind.</a><br> by<a href="https://www.reddit.com/user/funnyfishwalter/">u/funnyfishwalter</a> in<a href="https://www.reddit.com/r/replit/">replit</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
-<!-- ai i was working on for adv cs -->
-- zayd-unix
-- Mirror git@codebasehq.com:aratools/aratools/aratools-core.git (but how?)
 - beepbox -> soundcloud automatizer
 - I forgor 💀
 
