@@ -13,7 +13,7 @@ to-do list: (**bold** = main, none = side)
 - **learn flutter**
 - finish 99.lisp
 - work on z-ed
-  **create masjidhamza.com api (for myself)**
+- **create masjidhamza.com api (for myself)**
 - learn c++
 - remember python exists
 	- make lambdaplop
