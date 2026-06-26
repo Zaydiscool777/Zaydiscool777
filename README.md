@@ -10,10 +10,8 @@
 ## TO-DO LIST
 
 to-do list: (**bold** = main, none = side)
-- **learn flutter**
 - finish 99.lisp
 - work on z-ed
-- **create masjidhamza.com api (for myself)**
 - learn c++
 - remember python exists
 	- make lambdaplop
@@ -33,7 +31,6 @@ to-do list: (**bold** = main, none = side)
 ### OTHER TODOS
 <details>
 
-- Godot  
 - Blender
 - beepbox -> soundcloud automatizer
 - I forgor 💀
